@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+:root{
+        --main-color:white;
+        --color-50: #f4f7fb;
+        --color-100: #e7eff7;
+        --color-200: #cadded;
+        --color-300: #9bc1de;
+        --color-400: #66a1ca;
+        --color-500: #4285b5;
+        --color-600: #316b98;
+        --color-700: #265073;
+        --color-800: #254967;
+        --color-900: #233f57;
+        --color-950: #182939;
+}
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    height: 10vh;
+    width: 100%;
+    background-color: var(--color-200);
+    z-index: 10;
+}
+.pages_nav_cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.nav_link{
+    height: 100%;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-600);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.nav_link:hover{
+    background-color: var(--color-400);
+    color: var(--color-900);
+    cursor: pointer;
+}
+.remove{
+    display: none !important;
+}
+.nav_img{
+    height: 100%;
+    width: 75px;
+    padding: 10px;
+    font-size: 80px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-700);
+}
+.light_dark_icon{
+    padding: 10px;
+    font-size: 20px !important;
+    color: var(--color-800);
+}
+.light_dark_icon:hover{
+    color: var(--color-500);
+    cursor: pointer;
+}
+.main_view{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+}
+.main_view>h1{
+    color: var(--color-900);
+    padding-bottom: 100px;
+    padding: 10px;
+}
+.space_main{
+    height: 20vh;
+}
+@keyframes main_view{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+            opacity: 100%;
+    }
+}
+.main_view_cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    gap: 10px;
+    animation: forwards main_view 2s;
+    flex-wrap: wrap;
+
+}
+.main_view_cont>img{
+    border-radius: 10px;
+    width: 40%;
+    height: 80%;
+    box-shadow: 2px 2px 2px black;
+}
+.main_view_cont>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.main_view_cont>div>h1{
+    color: var(--color-800);
+    border-bottom: var(--color-500) 2px solid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main_view_cont>div>p{
+    text-align: center;
+    color: var(--color-700);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (max-width:486px) {
+    .main_view_cont>img{
+        width: 400px;
+        height: 300px;
+    }
+    .main_view_cont>div{
+        width: initial;
+        height: initial;
+    }
+}
+.page_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    gap: 10px;
+    animation: forwards main_view 2s;
+    flex-wrap: wrap;
+}
+.page_section:nth-of-type(even){
+    flex-direction: row;
+}
+.page_section:nth-of-type(odd){
+    flex-direction: row-reverse;
+}
+.page_section>img{
+    border-radius: 10px;
+    width: 40%;
+    height: 80%;
+    box-shadow: 2px 2px 2px black;
+}
+.page_section>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.page_section>div>h1{
+    color: var(--color-800);
+    border-bottom: var(--color-500) 2px solid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.page_section>div>p{
+    text-align: center;
+    color: var(--color-700);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.page_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 500px;
+}
